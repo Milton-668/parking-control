@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: parking-control
+  datasource:
+    url: jdbc:mysql://localhost:3306/parking-control-db?createDatabaseIfNotExist=true
+
+    username: root
+    password: root
+  jpa:
+    hibernate:
+      ddl-auto: update
+      jdbc:
+        lob:
+          non_contextual_creation: 'true'
+  output:
+    ansi:
+      enabled: ALWAYS

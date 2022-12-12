@@ -1,15 +1,13 @@
 version: '3.1'
-
 services:
-
   db:
-    image: postgres:14.2-alpine
-    container_name: postgress
+    image: mysql
+    container_name: mysql
     restart: always
     environment:
-      POSTGRES_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: root
     ports:
-      - "5432:5432"
+      - "3306:3306"
 
   adminer:
     image: adminer
@@ -17,3 +15,6 @@ services:
     restart: always
     ports:
       - 8585:8080
+
+volumes:
+  parking_data:
